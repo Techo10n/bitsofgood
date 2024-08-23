@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(180deg, #002d61 0%, #00021a);
+    font-family: 'inter', sans-serif;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+a {
+    text-decoration: none;
+    color: #00021a;
+}
+
+a:hover {
+    color: #000000;
+}
+
+.container {
+    height: 500px;
+    width: 350px;
+    perspective: 800px;
+}
+
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition:transform 1.1s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-image: url("ZechariahFrierson28.jpg");
+    background-size: cover;
+    font-size: 130%;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+}
+
+.back {
+    background-color: aliceblue;
+    color: #00021a;
+    text-align: center;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #00021a;
+}
+
+.socials {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-around;
+    color: #00021a;
+}
+
+.typewriter {
+    display: flex;
+    
+    font-size: 200%;
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: typing 1.5s steps(9) forwards, blink 0.85s step-end 4 forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
